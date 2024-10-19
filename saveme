@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Get the commit message from the first argument
+m="$1"
+
+# Check if a commit message is provided
+if [ -z "$m" ]; then
+    echo "Error: Please provide a commit message."
+    exit 1
+fi
+
+# Get the current date and time in the desired format
+datetime=$(date +"%Y-%m-%d %H:%M:%S")
+
+# Pull changes from all branches
+git pull --all
+
+# Add all changes to the staging area
+git add .
+
+# Commit changes with the date-time prefix and the provided commit message
+git commit -m "[$datetime] $m"
+
+# Push changes to all branches
+git push --all
+
+# Check the exit status of the last executed command (git push)
+if [ $? -eq 0 ]; then
+    echo "Git push successful."
+else
+    echo "Error: Git push failed."
+fi
