@@ -67,6 +67,12 @@
 
 // echo "Globale $a"
 
+
+// Constant
+// define("MAX_USERS", 100);
+// echo MAX_USERS;
+
+
 ?>
 
 </body>
