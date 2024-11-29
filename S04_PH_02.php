@@ -44,17 +44,29 @@
 
 
         // forEach Loop
-        $friendsEmails = ["alice@example.com", "bob@example.com", "carol@example.com"];
-        foreach ($friendsEmails as $email) {
-            echo "Sending email to: $email<br>";
+        // $friendsEmails = ["alice@example.com", "bob@example.com", "carol@example.com"];
+        // foreach ($friendsEmails as $email) {
+        //     echo "Sending email to: $email<br>";
+        // }
+
+        // echo "<hr>";
+
+        // $empEmails = ["emp@example.com", "emp2@example.com", "emp3@example.com"];
+        // foreach ($empEmails as $email) {
+        //     echo "Sending email to: $email<br>";
+        // }
+
+
+        for ($i = 0; $i < 10; $i++) {
+            echo $i . "<br/>";
+
+            if ($i == 5) {
+                echo "<script>alert('Here I is $i');</script>";
+            }
         }
 
-        echo "<hr>";
-
-        $empEmails = ["emp@example.com", "emp2@example.com", "emp3@example.com"];
-        foreach ($empEmails as $email) {
-            echo "Sending email to: $email<br>";
-        }
+        $products = array("Laptop", "Mouse", "Keyboard");
+        echo $products[0]; // Output: Laptop
 
 
 
